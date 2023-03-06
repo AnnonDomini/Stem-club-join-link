@@ -17,7 +17,7 @@ class Question {
     this.title.hide();
     this.input1.hide();
     this.button.hide();
-    //this.button2.hide();
+    this.button2.hide();
     this.input2.hide();
   }
 
@@ -54,15 +54,11 @@ class Question {
       contestant.updateCount(contestantCount);
     });
 
-     reset_all(Reason,Authcode){
-      if(Reason === 1 ){
-        if(Authcode === 182321){
-         contestant.updateCount(0)
-         quiz.update(0)
-         var ref = database.ref("contestants")
-         ref.remove()
-        }
-      }
-    }
+    this.button2.mousePressed(()=>{
+      /*contestant.updateCount(0)
+      quiz.update(0)
+      var ref = database.ref("contestants")
+      ref.remove()*/
+    })
   }
 }
